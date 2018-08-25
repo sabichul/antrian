@@ -50,7 +50,7 @@ error_reporting(0);
              <link rel="stylesheet" href="compiled/flipclock.css">
 </head>
 
-<body class="sidebar-left ">
+<body >
 <div class="page-container">
     <div id="header-container">
         <div id="header">
@@ -83,42 +83,20 @@ error_reporting(0);
                             id='1'");
     $r    = mysql_fetch_array($detail); ?>
 
-        <div id="main-content" class="main-content container-fluid">
-            <div id="page-content" class="page-content">
-                <section>
-                    
-                    <div class="row-fluid">
-                        <div class="span12">
-                            <div id='media-player' class="span12">
-		<video id='media-video' class="span12" preload loop>
-                    <source src='video/<?php echo "$r[nama_file]";?>' type='video/mp4'>
-		</video>
-	</div>
-                           
-                        </div>
-                        <!-- // Column -->
-                        
-                    </div>
-                    <!-- // Example row --> 
-                    
-                </section>
-                 <center> <h4 class="blink">.:: Budayakan Antri Untuk Kenyamanan Bersama, Terimakasih Atas Kunjungan Anda ::. </h4></center>    
-            </div>
-        </div>
-        <!-- // main-content --> 
+        
         
     </div>
     <!-- // main-container  -->
     
-    <footer id="footer-fix">
+    <!-- <footer id="footer-fix">
         <div id="footer-sidebar" class="footer-sidebar">
             <div class="navbar">
                 <center><div class="clock"></div></center>
             </div>
-        </div>
+        </div> -->
         <!-- // footer sidebar -->
         
-        <div id="footer-content" class="footer-content">
+        <!-- <div id="footer-content" class="footer-content">
             <span style='font-family:arial; font-size: 15px; font-weight:bold; color:#FFFF00;'> <marquee direction='left' scrollamount='5' height='35px' width='100%' bgcolor='#272B2E' >
             <?php 
                 $sql = mysql_query("SELECT  id, isi_text FROM running_text");
@@ -130,10 +108,10 @@ error_reporting(0);
                 </marquee></span>
 
             
-        </div>
+        </div> -->
         <!-- // footer content --> 
         
-    </footer>
+    <!-- </footer> -->
     <!-- // footer-fix  --> 
     
 </div>
