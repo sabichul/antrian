@@ -39,7 +39,7 @@ $detail = mysql_query("SELECT * FROM
                             <center><h6 style="font-weight:bold; color:gray;">Menu</h6>    
                                 <a id="back" class="btn btn-well btn-glyph btn-black" href="#" style="width:82px"><i class=" fontello-icon-reply-1 f30"></i><span class="block">BACK</span></a>
                                 <a id="next" class="btn btn-well btn-glyph btn-black" href="#" style="width:82px"><i class=" fontello-icon-play-2 f30"></i><span class="block">NEXT</span></a>
-                                <a class="btn btn-well btn-glyph btn-black" name="play" onclick="mulai();" type="button" style="width:82px"><i class=" fontello-icon-megaphone-1 f30"></i><span class="block">SOUND</span></a>
+                                <a id="play" class="btn btn-well btn-glyph btn-black" href="#" style="width:82px"><i class=" fontello-icon-megaphone-1 f30"></i><span class="block">PANGGIL</span></a>
 
                                  <a class="btn btn-well btn-glyph btn-black" href="#" style="width:82px" data-toggle="modal" data-target="#confirm-jump"><i class="fontello-icon-rocket f30"></i><span class="block">JUMP</span></a>
                                 <a class="btn btn-well btn-glyph btn-black" href="#" style="width:82px" data-toggle="modal" data-target="#confirm-save"><i class="fontello-icon-edit-2 f30"></i><span class="block">SAVE</span></a>
@@ -79,10 +79,7 @@ $detail = mysql_query("SELECT * FROM
          }
 
      });
-
-
-}
-
+    }
 });
 
    $('#back').click(function(e){
@@ -106,12 +103,7 @@ $detail = mysql_query("SELECT * FROM
              }
          });
 }
-    $(document).ready(function(){
-        $("#play").click(function(){
-            document.getElementById('suarabel').play();
-        });
 
-    });
 
 </script>                
                      </div>

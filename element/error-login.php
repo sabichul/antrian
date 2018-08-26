@@ -9,7 +9,7 @@ echo "
 <title>Login Administrator</title>
 <link rel=\"stylesheet\" type=\"text/css\" href=\"../webroot/css/style_login.css\" />
 
-<link rel=\"shortcut icon\" href=\"images/images_admin/favicon.ico\" />
+<link rel=\"shortcut icon\" href=\"images/images_admin/demo.ico\" />
 </head>
 <body>
 

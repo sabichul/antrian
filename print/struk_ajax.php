@@ -27,8 +27,7 @@ else{
 -->
 <html>
 	<head>
-		<title>BANK INI
-</title>
+		<title>Pertamina PDC</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -54,7 +53,7 @@ else{
 				<!-- Header -->
 					<header id="header">
 
-						<h1>BANK INI </h1>
+						<h1><img src="../webroot/img/logo.png" style="height: 65px"></h1>
 						<p>Silahkan Pilih Menu Antrian Dan Ambil Nomor Antrian</p>
 						<nav>
 							<ul>

@@ -26,13 +26,11 @@ $antrian=$nomor;
 
 
 ?>
-<script type="text/javascript" >
 
-</script>
 
-<audio id="suarabel" src="Airport_Bell.mp3"></audio>
-<audio id="suarabelnomorurut" src="rekaman/nomor-urut.wav"  ></audio>
-<audio id="suarabelsuarabelloket" src="rekaman/loket.wav"  ></audio>
+<audio id="suarabel" src="rekaman/voice.wav"></audio>
+<audio id="suarabelnomorurut" src="rekaman/call.wav"  ></audio>
+<audio id="suarabelsuarabelloket" src="rekaman/silahkan_ke_counter.wav"  ></audio>
 
 <audio id="belas" src="rekaman/belas.wav"  ></audio>
 <audio id="sebelas" src="rekaman/sebelas.wav"  ></audio>
@@ -41,7 +39,7 @@ $antrian=$nomor;
 <audio id="ratus" src="rekaman/ratus.wav"  ></audio>
 <audio id="seratus" src="rekaman/seratus.wav"  ></audio>
 <audio id="suarabelloket2" src="rekaman/<?php echo "$loket";?>.wav"  ></audio>
-<?php	for($i=0;$i<$panjang;$i++){
+<?php   for($i=0;$i<$panjang;$i++){
     ?>
     <audio id="suarabel<?php echo $i; ?>" src="rekaman/<?php echo substr($antrian,$i,1); ?>.wav" ></audio>
 <?php
@@ -57,7 +55,7 @@ $antrian=$nomor;
         document.getElementById('suarabel').play();
 
         //SET DELAY UNTUK MEMAINKAN REKAMAN NOMOR URUT
-        totalwaktu=document.getElementById('suarabel').duration*1000;
+        totalwaktu=document.getElementById('suarabel').duration*500;
 
         //MAINKAN SUARA NOMOR URUT
         setTimeout(function() {
@@ -65,7 +63,7 @@ $antrian=$nomor;
             document.getElementById('suarabelnomorurut').currentTime=0;
             document.getElementById('suarabelnomorurut').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+2000;
+        totalwaktu=totalwaktu+1000;
 
         <?php
             //JIKA KURANG DARI 10 MAKA MAIKAN SUARA ANGKA1
@@ -78,7 +76,7 @@ $antrian=$nomor;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
 
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
             }elseif($antrian ==10){
                 //JIKA 10 MAKA MAIKAN SUARA SEPULUH
@@ -88,7 +86,7 @@ $antrian=$nomor;
             document.getElementById('sepuluh').currentTime=0;
             document.getElementById('sepuluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
             }elseif($antrian ==11){
                 //JIKA 11 MAKA MAIKAN SUARA SEBELAS
@@ -98,7 +96,7 @@ $antrian=$nomor;
             document.getElementById('sebelas').currentTime=0;
             document.getElementById('sebelas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
             }elseif($antrian < 20){
                 //JIKA 12-20 MAKA MAIKAN SUARA ANGKA2+"BELAS"
@@ -108,13 +106,13 @@ $antrian=$nomor;
             document.getElementById('suarabel1').currentTime=0;
             document.getElementById('suarabel1').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('belas').pause();
             document.getElementById('belas').currentTime=0;
             document.getElementById('belas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
                     }elseif($antrian < 100){
                         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -124,19 +122,19 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('puluh').pause();
             document.getElementById('puluh').currentTime=0;
             document.getElementById('puluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel1').pause();
             document.getElementById('suarabel1').currentTime=0;
             document.getElementById('suarabel1').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
 }elseif($antrian ==100){
     //JIKA 100 MAKA MAIKAN SUARA SEratus
@@ -146,7 +144,7 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
             }elseif($antrian < 110){
                 //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -157,13 +155,13 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
     }elseif($antrian == 110){
         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -173,13 +171,13 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('sepuluh').pause();
             document.getElementById('sepuluh').currentTime=0;
             document.getElementById('sepuluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
         //JIKA KURANG DARI 10 MAKA MAIKAN SUARA ANGKA1
         }elseif($antrian == 111){
@@ -190,13 +188,13 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('sebelas').pause();
             document.getElementById('sebelas').currentTime=0;
             document.getElementById('sebelas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
     }elseif($antrian < 120){
         //JIKA 12-20 MAKA MAIKAN SUARA ANGKA2+"BELAS"
@@ -206,19 +204,19 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('belas').pause();
             document.getElementById('belas').currentTime=0;
             document.getElementById('belas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
                     }elseif($antrian < 200){
                         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -228,25 +226,25 @@ $antrian=$nomor;
             document.getElementById('seratus').currentTime=0;
             document.getElementById('seratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel1').pause();
             document.getElementById('suarabel1').currentTime=0;
             document.getElementById('suarabel1').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('puluh').pause();
             document.getElementById('puluh').currentTime=0;
             document.getElementById('puluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
                }elseif($antrian ==200){
                    //JIKA 100 MAKA MAIKAN SUARA SEratus
@@ -256,13 +254,13 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
                     }elseif($antrian < 210){
                         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -272,19 +270,19 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
     }elseif($antrian == 210){
         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
@@ -294,19 +292,19 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('sepuluh').pause();
             document.getElementById('sepuluh').currentTime=0;
             document.getElementById('sepuluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
         //JIKA KURANG DARI 10 MAKA MAIKAN SUARA ANGKA1
         }elseif($antrian == 211){
@@ -316,19 +314,19 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('sebelas').pause();
             document.getElementById('sebelas').currentTime=0;
             document.getElementById('sebelas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
     }elseif($antrian < 220){
         //JIKA 12-20 MAKA MAIKAN SUARA ANGKA2+"BELAS"
@@ -338,27 +336,27 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('belas').pause();
             document.getElementById('belas').currentTime=0;
             document.getElementById('belas').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         <?php
-                    }elseif($antrian < 1000){
+                    }elseif($antrian < 1600){
                         //JIKA PULUHAN MAKA MAINKAN SUARA ANGKA1+PULUH+AKNGKA2
                 ?>
         setTimeout(function() {
@@ -366,31 +364,31 @@ $antrian=$nomor;
             document.getElementById('suarabel0').currentTime=0;
             document.getElementById('suarabel0').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('ratus').pause();
             document.getElementById('ratus').currentTime=0;
             document.getElementById('ratus').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel1').pause();
             document.getElementById('suarabel1').currentTime=0;
             document.getElementById('suarabel1').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('puluh').pause();
             document.getElementById('puluh').currentTime=0;
             document.getElementById('puluh').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel2').pause();
             document.getElementById('suarabel2').currentTime=0;
             document.getElementById('suarabel2').play();
         }, totalwaktu);
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
 
         <?php
             }else{
@@ -404,7 +402,7 @@ $antrian=$nomor;
             for($i=0;$i<$panjang;$i++){
         ?>
 
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabel<?php echo $i; ?>').pause();
             document.getElementById('suarabel<?php echo $i; ?>').currentTime=0;
@@ -423,11 +421,18 @@ $antrian=$nomor;
             document.getElementById('suarabelsuarabelloket').play();
         }, totalwaktu);
 
-        totalwaktu=totalwaktu+1000;
+        totalwaktu=totalwaktu+1600;
         setTimeout(function() {
             document.getElementById('suarabelloket2').pause();
             document.getElementById('suarabelloket2').currentTime=0;
             document.getElementById('suarabelloket2').play();
         }, totalwaktu);
     }
+        $(document).ready(function(){
+        $("#play").click(function(){
+            document.getElementById('suarabel').play();
+            mulai();
+            //alert("terpanggil");
+        });
+    });
 </script>

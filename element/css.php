@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Aplikasi Antrian Bank ini
+<title>Aplikasi Antrian Pertamina PDC
 </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +30,7 @@
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="webroot/ico/favicon.ico">
+<link rel="shortcut icon" href="webroot/ico/demo.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="webroot/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="webroot/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="webroot/ico/apple-touch-icon-72-precomposed.png">

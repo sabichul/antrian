@@ -26,9 +26,6 @@ $antrian=$nomor;
 
 
 ?>
-<script type="text/javascript" >
-
-</script>
 
 <audio id="suarabel" src="rekaman/voice.wav"></audio>
 <audio id="suarabelnomorurut" src="rekaman/call.wav"  ></audio>
@@ -430,4 +427,11 @@ $antrian=$nomor;
             document.getElementById('suarabelloket2').play();
         }, totalwaktu);
     }
+        $(document).ready(function(){
+        $("#play").click(function(){
+            document.getElementById('suarabel').play();
+            mulai();
+            //alert("terpanggil");
+        });
+    });
 </script>

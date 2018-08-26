@@ -5,11 +5,9 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>.:: Aplikasi Antrian Bank ini ::.</title>
+    <title>.:: Aplikasi Antrian Pertamina PDC ::.</title>
     <meta name="description" content="Aplikasi Antrian">
-    <meta name="author" content="M.Mattawang.S.Kom">
-    <meta name="keywords" content="programmer jalanan">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/demo.ico">
     <link rel="stylesheet" href="loginStyle/css/login.css"/>
     <script src="front/js/modernizr.min.js"></script>
 </head>

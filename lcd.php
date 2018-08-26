@@ -13,7 +13,7 @@ error_reporting(0);
 
 <head>
 <meta charset="utf-8">
-<title>Boo Admin - Dashboard 1</title>
+<title>Pertamina PDC</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,7 +37,7 @@ error_reporting(0);
 <![endif]-->
 
 <!-- Le fav and touch icons -->
-<link rel="shortcut icon" href="webroot/ico/favicon.ico">
+<link rel="shortcut icon" href="webroot/ico/demo.ico">
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="webroot/ico/apple-touch-icon-144-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="webroot/ico/apple-touch-icon-114-precomposed.png">
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="webroot/ico/apple-touch-icon-72-precomposed.png">
@@ -50,7 +50,7 @@ error_reporting(0);
              <link rel="stylesheet" href="compiled/flipclock.css">
 </head>
 
-<body >
+<body style="background: #fff">
 <div class="page-container">
     <div id="header-container">
         <div id="header">
@@ -58,7 +58,7 @@ error_reporting(0);
                 <div class="navbar-inner">
                     <div class="container-fluid">
                         <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                        <a class="brand" href="javascript:void(0);"><h3>Antrian Bank Ini</h3></a>
+                        <a class="brand" href="javascript:void(0);"><h3><img src="webroot/img/logo.png" style="height: 50px"></h3></a>
 		
                     </div>
                 </div>
@@ -88,16 +88,16 @@ error_reporting(0);
     </div>
     <!-- // main-container  -->
     
-    <!-- <footer id="footer-fix">
+    <footer id="footer-fix" style="background:#16171a !important;height: 11.5% !important;">
         <div id="footer-sidebar" class="footer-sidebar">
             <div class="navbar">
                 <center><div class="clock"></div></center>
             </div>
-        </div> -->
+        </div>
         <!-- // footer sidebar -->
         
-        <!-- <div id="footer-content" class="footer-content">
-            <span style='font-family:arial; font-size: 15px; font-weight:bold; color:#FFFF00;'> <marquee direction='left' scrollamount='5' height='35px' width='100%' bgcolor='#272B2E' >
+        <!-- <div id="footer-content" class="footer-content well well-black">
+            <span style='font-family:arial; font-size: 25px; font-weight:bold; color:#FFFF00;'> <marquee direction='left' scrollamount='5' height='35px' width='100%'>
             <?php 
                 $sql = mysql_query("SELECT  id, isi_text FROM running_text");
 
@@ -111,7 +111,7 @@ error_reporting(0);
         </div> -->
         <!-- // footer content --> 
         
-    <!-- </footer> -->
+    </footer>
     <!-- // footer-fix  --> 
     
 </div>
